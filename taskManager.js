@@ -1,4 +1,4 @@
-export class Task{
+class Task{
     constructor(id,title,completed){
         Object.defineProperty(this,'id',{
             value:id,
@@ -23,9 +23,9 @@ class TaskManager{
         tasks=[...tasks,task];
     }
     removeTask(taskId){
-        tasks.filter(t()=>{t.id===taskId?taskId.removeTask():taskId});
+        tasks.filter(t=>{t.id===taskId?taskId.removeTask():taskId});
     }
     toggleTask(taskId){
-        tasks.filter(t()=>{t.id====taskId?t.complete=True:False});
+        tasks.filter(t=>{t.id===taskId?t.complete=true:t.complete=false});
     }
 } 
