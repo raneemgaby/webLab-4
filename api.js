@@ -1,4 +1,5 @@
 function fetchTasks(){
+    return new Promise((resolve,reject)=>{
     setTimeout(() => {
         const promise=[
   { id: 1, title: "Study JavaScript", completed: false },
@@ -7,5 +8,4 @@ function fetchTasks(){
 ]
 
     }, 1.5);
-    return promise;
-}
+})}
