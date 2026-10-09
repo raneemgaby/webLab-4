@@ -13,19 +13,19 @@ class Task{
     }
 }
 
-class TaskManager{
-   Task=[tasks];
+export class TaskManager{
+    constructor(tasks){this.tasks=[];}
 
     setTasks(tasks){
         this.tasks=[...tasks];
     }
     addTask(task){
-        tasks=[...tasks,task];
+        this.tasks=[...this.tasks,task];
     }
     removeTask(taskId){
-        tasks.filter(t=>{t.id===taskId?taskId.removeTask():taskId});
+        this.tasks=this.tasks.filter(t=>{t.id!==taskId});
     }
     toggleTask(taskId){
-        tasks.filter(t=>{t.id===taskId?t.complete=true:t.complete=false});
+        this.task=this.tasks.map(t=>{t.id===taskId? t.toggle():t});
     }
 } 
