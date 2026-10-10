@@ -1,0 +1,11 @@
+div{
+    display:flex;
+    border:1px solid;
+    padding:5px;
+    margin:4px;
+}
+
+.taskList.complete{
+  text-decoration:line-through;
+  color:darkgrey;
+}
