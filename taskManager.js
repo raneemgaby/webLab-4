@@ -10,7 +10,7 @@ export class Task{
         this.completed=completed;
     }
     toggle(){
-        return (new Task,comleted=true);
+        return new Task(this.id,this.title,!this.comleted);
     }
 }
 
