@@ -1,5 +1,5 @@
 export function fetchTasks(){
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve)=>{                      //to return a promise,no reject cause a real implementation might reject on a simulated failure,caiught by try catch 
     setTimeout(() => {
         resolve([
   { id: 1, title: "Study JavaScript", completed: false },

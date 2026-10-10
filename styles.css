@@ -1,11 +1,13 @@
-div{
+.task{                                 /*customizing the whole task boxes*/
     display:flex;
-    border:1px solid;
+    border:1px solid #ccc;
     padding:5px;
     margin:4px;
+    gap:10px;
+    align-items:center;
 }
 
-.taskList.complete{
+.task.completed span{              /*customizing the deleted tasks-bix layout with a line through*/
   text-decoration:line-through;
   color:darkgrey;
 }

@@ -1,3 +1,4 @@
+//Task CLASS
 class Task{
     constructor(id,title,completed){
         Object.defineProperty(this,'id',{
@@ -13,6 +14,7 @@ class Task{
     }
 }
 
+//managerTask CLASS
 export class TaskManager{
     constructor(tasks){this.tasks=[];}
 
