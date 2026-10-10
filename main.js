@@ -26,7 +26,7 @@ function render(){
     taskList.replaceChildren();          //clear the task list safely before rendering current state,to prevent duplicates and complex structure 
     taskManager.tasks.forEach(tasks=>{   //to add new tasks a loop is required to add each new added task to newly createed container(div) and assign it the task class properities
         const tasksAdded=document.createElement('div');
-        tasksAdded.className='Task';     //a class to contain the newly-added tasks
+        tasksAdded.className='task';     //a class to contain the newly-added tasks
         if(tasks.completed){             //toggle the task if done
             tasksAdded.classList.add('completed');       //add a completed class for the completed tasks
         }

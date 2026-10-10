@@ -25,9 +25,9 @@ export class TaskManager{
         this.tasks=[...this.tasks,task];
     }
     removeTask(taskId){
-        this.tasks=this.tasks.filter(t=>{t.id!==taskId});
+        this.tasks=this.tasks.filter(t=>t.id!==taskId);
     }
     toggleTask(taskId){
-        this.task=this.tasks.map(t=>{t.id===taskId? t.toggle():t});
+        this.task=this.tasks.map(t=>t.id===taskId? t.toggle():t);
     }
 } 
