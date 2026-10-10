@@ -1,37 +1,34 @@
-const p=documnet.getElementById('statusMessage');
+import { fetchTasks } from './api.js';
+import { Task, TaskManager } from './taskManager.js';
 
-async function fetchTasks(){
- try{
-  const tasks=await fetchTasks(documnet.getElementById('taskList'));
-  console.log(tasks);
-  let taskInstances=JSON.stringify(tasks);
-  let parseBack=JSON.parse(taskIntances);
-  const taskObje=JSON.stringigy(taskIntances);
-  taskObj.forEach(task=>{new task(task.id,task.title.task.completed)});
-  //saving in task manager
-  const renderTasks=documnet.getElementById('taskList');
-  const newElement=documnet.createElement('span');
-  const text=document.createTextNode(Task.title);
-  const toggleBtn=document.taskManager(toggle(task));
-  button.addEventListener('toggle',event=>{
-      event.type;
-      event.target;
-      event.clientX;
-      event.timeStamp;
-      const renderToggle=documnet.getElementById('taskList');
+const taskManager = new TaskManager();
+const loadTasksBtn = document.getElementById('loadTasksBtn');
+const statusMessage = document.getElementById('statusMessage');
+const taskList = document.getElementById('taskList');
+
+async function loadTasks(){
+    try{
+        const fetch =await fetchTasks();
+        todoList.addListener('click',e=>{
+            if(e.target.classList.contains('delete_btn')){
+                e.target.closest('todo_task').remove();
+                render();
+            }
+            if(e.target.classList.contains('toggle_btn')){
+                e.target.closest('todo_task').classList.toggle('complete');
+                render();
+            }
+        });
+    }catch(error){
+        console.error("Error happend!couldn't fetch the task.");
     }
-  const deleteBtn=document.taskManager(delete(task));
-  button.addEventListener('click',event=>{
-    event.type; 
-    event.target;
-    event.client;
-    event.timeStamp;
-    const renderDelete=documnet.getElementById('taskList');
-  })
-  const renderDelete=documnet.getElementById('taskList'); }catch(error){
-  console.error('Error fetching tasks;',error);
- }
 }
 
+function render(){
+    const getTask=document.getElementById('div');
+    let title=getTask.id;
+    let complete=getTask.toggle();
+    let delete=getTask.removeTask();
 
+}
 
