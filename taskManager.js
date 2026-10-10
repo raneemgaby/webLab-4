@@ -1,5 +1,5 @@
 //Task CLASS
-class Task{
+export class Task{
     constructor(id,title,completed){
         Object.defineProperty(this,'id',{
             value:id,
